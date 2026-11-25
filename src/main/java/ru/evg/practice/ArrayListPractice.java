@@ -1,20 +1,22 @@
 package ru.evg.practice;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ArrayListPractice {
-    static void main() {
-    ArrayList<Integer> numbers = new ArrayList<>();
-    int nums [] = {12, 3, 8, 1, 15, 4, 7, 2, 20, 5};
-        for (int i = 0; i < nums.length; i++) {
-            numbers.add(nums[i]);
+    public static void main(String[] args) {
+        List<Integer> numbers = new ArrayList<>();
+        int[] nums2 = {1, 2, 3, 12, 4, 4, 9, 0, 5, 1, 6, 2};
+        for (int i = 0; i < nums2.length; i++) {
+            numbers.add(nums2[i]);
         }
         for (int i = 0; i < numbers.size(); i++) {
             if (numbers.get(i) < 5) {
                 numbers.remove(i);
-
+                i--;
             }
         }
         System.out.println(numbers);
+        System.out.println(numbers.size() + " - Колличество элеметов ");
     }
 }
